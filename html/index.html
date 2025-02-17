@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">   
+</head>
+<style>
+    label::after{
+        content: '*';
+        color: red;
+    }
+</style>
+<body>
+
+  <strong><p style="text-align: center;">Hi, Welcome to HTML 👶</p></strong> 
+
+  <div class="container-fluid">
+      
+    <div class="col-md-3">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+    </div>
+    <br>  
+    <div class="col-md-3">
+        <label for="mobileNo">Mobile No.</label>
+        <input type="number" class="form-control" id="mobileno" placeholder="Your Mobile No.">
+    </div>
+    <br>
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-outline-primary" onclick="clickMe()">Submit</button>
+    </div>
+    <br>
+    <div class="alert alert-primary" role="alert" id="message" style="display: none;width: 35%;">    
+    </div>    
+  </div> 
+  <div class="container-fluid">
+        <video height="300" width="400" controls>
+            <source src="./media/sample.mp4" type="video/mp4">
+        </video>
+        <br><br>
+        <audio controls>
+            <source src="./media/audio.mp3" type="audio/mp3">
+        </audio>
+        <br><br>
+        <iframe src="https://www.youtube.com/embed/A3HoTv9P2yY" width="750" height="450"></iframe>
+  </div>  
+</body>
+<script>
+    
+    // var para = document.createElement("p");
+    // para.innerText = "This is a paragraph";
+    // document.body.appendChild(para);
+    
+    function clickMe(){
+        var name = document.getElementById('name').value; 
+        var mobile = document.getElementById('mobileno').value;        
+
+        if(name == ''){
+            alert('Enter your Name'); return;
+        }
+                    
+        if(mobile == ''){
+            alert('Enter your Mobile No.'); return;
+        }
+
+        if(name.length < 2){
+            document.getElementById('name').value = '';
+            alert('Please enter your proper name ');
+            return;
+        }
+
+        if(mobile.length > 10 || mobile.length < 10){
+            document.getElementById('mobileno').value = '';
+            alert('Please enter your proper Mobile No ');
+            return;
+        }
+        document.getElementById('message').style.display = '';
+        document.getElementById('message').innerText = `Welcome ${name}. Your Mobile No is ${mobile}`;  // template string
+    
+    }
+</script>
+
+</html>

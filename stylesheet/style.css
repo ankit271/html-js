@@ -1,0 +1,47 @@
+.container {
+    width: 98%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.header-info {
+    color: white;
+    font-size: 35px;
+    border-radius: 10px;
+    margin-top: -47px;
+}
+
+.header {
+    background-color: brown;
+}
+
+h4 {
+    background-color: green;
+    width: 90%;
+    margin-left: 5%;
+}
+
+img {
+    margin-top: -46px;
+}
+
+h2 {
+    background-color: red;
+    color: white;
+    margin-top: -4px;
+    padding: 5px;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-left: -85%;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 80%;
+}

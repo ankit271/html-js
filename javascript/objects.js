@@ -19,25 +19,11 @@ const names = [
     }
 ]
 
-const a = [1,2,4]
+const alphabates = new Set(['a','b','c','d'])
 
-const [one, ...zainab] = a
+console.log(alphabates.keys());
 
-console.log(one);
-console.log(zainab);
-
-
-
-// const name = names.entries();
-
-// for (const element of name) {
-//     console.log(element);
-// }
-
-
-
- 
-
-
-// const name = names.filter( name => name.age > 27);
-// console.log(name);
+function searchData(){
+    console.log('Search Data');
+    
+}

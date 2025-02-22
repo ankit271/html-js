@@ -8,7 +8,7 @@
 
 */
 
-const numbers = [10,20,30,40,50,10]
+//const numbers = [10,20,30,40,50,10]
 // const numbers1 = [10,20,30,40,50,10]
 
 //console.log(numbers.sort().reverse())
@@ -21,8 +21,8 @@ const numbers = [10,20,30,40,50,10]
 
 //const modNumber = numbers.filter(num => num >= 18)
 
-const modNumber = numbers.reduce( (num, total) => num + total, 0 )
-console.log(modNumber)
+// const modNumber = numbers.reduce( (num, total) => num + total, 0 )
+// console.log(modNumber)
 //const modNumber = numbers.every(num => num > 9)
 
 //const modNumber = numbers.some(num => num > 10)
@@ -42,6 +42,11 @@ console.log(modNumber)
 //console.log(numbers);
 
 
-
+function searchData(){
+    debugger;
+    for (let index = 0; index < 5; index++) {        
+        console.log(index)
+    }
+}
 
 

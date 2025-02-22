@@ -1,4 +1,4 @@
-import { message, info, sayHello } from './message.js';
+import { message,info ,sayHello } from './message.js';
 
 // console.log(info);
 // console.log(message);
@@ -6,6 +6,6 @@ import { message, info, sayHello } from './message.js';
 // let welcome = sayHello();
 // console.log(welcome);
 
-export default function sayGoodbye(){
+export function sayGoodbye(){
     return info;
 }

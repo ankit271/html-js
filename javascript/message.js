@@ -7,4 +7,5 @@ function sayHello() {
   return 'Welcome to the ES6 Modules';
 }
 
-export { message, info, sayHello };
+export {message,info ,sayHello};
+//console.log('This is a message from message.js');

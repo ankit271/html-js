@@ -1,4 +1,4 @@
-object
+//object
 
 const user = {
     name:'Ankit',
@@ -12,7 +12,7 @@ const user = {
 console.log(user.name);
 console.log(user.calculateDoB());
 
-Array
+//Array
 
 const nums = [10,20,30,40,50]
 
@@ -32,7 +32,7 @@ const add = (num1,num2 ) => num1 + num2;
 
 console.log(add(5,6));
 
-Set
+//Set
 
 const nums1 = new Set([10,20,30,40,50,10,20,30,40,50]);
 nums1.add(60);

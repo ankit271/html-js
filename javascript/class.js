@@ -1,17 +1,41 @@
 
 class Car {
+    
+    constructor(name) {        
+        this.carName = name;
+    } 
+    
+    stop(){
+        console.log(`${this.carName} stopped`);
+    }
+    
+}
 
-    constructor(name){
-        this.carName = name; // property
+class Audi extends Car {
+    
+    constructor(name) {
+        super(name);
+    }
+    
+    start() {
+        console.log(`${this.carName} started with remote`);
     }
 
-    // method
-    start(){
-        console.log(`${this.carName} started`);
+    static longDrive(){
+        console.log('Goa Trip');
     }
 }
 
-let car = new Car('Jaugar');
-console.log(car.carName);
+let car = new Audi('Audi');
 
-car.start();
+try {
+    car.start()    
+} catch (error) {
+    console.log({name: error.name, message: error.message});        
+}
+Audi.longDrive();
+try {
+    car.stop()    
+} catch (error) {
+    console.log({name: error.name, message: error.message});        
+}

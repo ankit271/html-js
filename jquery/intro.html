@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <button id="btn">Click</button>
+</body>
+<script>
+
+   
+    $('#btn').click(function(){
+        // var firstData = $('table tr:first td:first').text();
+        //var lastData = $('table tr:last td:last').text();
+        //var secondData = $('table tr:nth-child(2) td:nth-child(2)').text();
+        $('table tr').each(function () {
+            var firstData = $(this).find('td:first').text();
+            var secondData = $(this).find('td:nth-child(2)').text();
+            var lastData = $(this).find('td:last').text();
+
+            console.log('First:', firstData, 'Second:', secondData, 'Last:', lastData);
+        });
+    })
+
+</script>
+</html>

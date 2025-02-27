@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+</head>
+<body>    
+    <table id="example"></table>
+    <button id="loadData">Load Data</button>
+</body>
+<script>
+  $(document).ready(function () {
+        $("#loadData").click(function () {
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts',  // URL to request data from
+                type: 'GET',  // Request type (GET, POST, etc.)
+                dataType: 'json',  // Expected data type from the server (JSON in this case)
+                success: function (data) {                    
+                  $('#example').DataTable({
+                        data: data,
+                        columns: [
+                          { data: 'title' },
+                          { data: 'body' },
+                          { data: 'userId' }
+                      ]
+                    });
+                },
+                error: function (xhr, status, error) {                    
+                    $('#result').html('<p>Error: ' + error + '</p>');
+                }
+            });
+        });
+    });
+
+</script>
+</html>

@@ -6,8 +6,17 @@
     <title>JQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+<style>
+    
+   .highlight{
+       background-color: yellow;
+       color: red;
+       font-size: 50px;
+   }
+</style>
 <body>
-    <table>
+    <h1><a href='http://google.com'>Google</a></h1>
+    <!-- <table>
         <tr>
             <td>1</td>
             <td>2</td>
@@ -23,24 +32,28 @@
             <td>8</td>
             <td>9</td>
         </tr>
-    </table>
+    </table> -->
+    
     <button id="btn">Click</button>
 </body>
 <script>
 
-   
     $('#btn').click(function(){
-        // var firstData = $('table tr:first td:first').text();
-        //var lastData = $('table tr:last td:last').text();
-        //var secondData = $('table tr:nth-child(2) td:nth-child(2)').text();
-        $('table tr').each(function () {
-            var firstData = $(this).find('td:first').text();
-            var secondData = $(this).find('td:nth-child(2)').text();
-            var lastData = $(this).find('td:last').text();
+      // $('h1').text('Hello').addClass('highlight').hide(2000);
+      alert($('h1').text());
+    });
+    // $('#btn').click(function(){
+    //     // var firstData = $('table tr:first td:first').text();
+    //     //var lastData = $('table tr:last td:last').text();
+    //     //var secondData = $('table tr:nth-child(2) td:nth-child(2)').text();
+    //     $('table tr').each(function () {
+    //         var firstData = $(this).find('td:first').text();
+    //         var secondData = $(this).find('td:nth-child(2)').text();
+    //         var lastData = $(this).find('td:last').text();
 
-            console.log('First:', firstData, 'Second:', secondData, 'Last:', lastData);
-        });
-    })
+    //         console.log('First:', firstData, 'Second:', secondData, 'Last:', lastData);
+    //     });
+    // })
 
 </script>
 </html>

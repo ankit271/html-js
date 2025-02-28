@@ -9,25 +9,27 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
 </head>
 <body>    
-    <table id="example"></table>
+    <!-- <table id="example"></table> -->
     <button id="loadData">Load Data</button>
+    <h1></h1>
 </body>
 <script>
   $(document).ready(function () {
         $("#loadData").click(function () {
             $.ajax({
-                url: 'https://jsonplaceholder.typicode.com/posts',  // URL to request data from
+                url: 'https://jsonplaceholder.typicode.com/posts/1',  // URL to request data from
                 type: 'GET',  // Request type (GET, POST, etc.)
                 dataType: 'json',  // Expected data type from the server (JSON in this case)
                 success: function (data) {                    
-                  $('#example').DataTable({
-                        data: data,
-                        columns: [
-                          { data: 'title' },
-                          { data: 'body' },
-                          { data: 'userId' }
-                      ]
-                    });
+                //   $('#example').DataTable({
+                //         data: data,
+                //         columns: [
+                //           { data: 'title' },
+                //           { data: 'body' },
+                //           { data: 'userId' }
+                //       ]
+                //     });
+                 $('h1').text(data.title)
                 },
                 error: function (xhr, status, error) {                    
                     $('#result').html('<p>Error: ' + error + '</p>');
